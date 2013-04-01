@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find out who you should marry</title>
+</head>
+
+<body>
+ {% if current_user %}
+  <h1>Hi {{escape(current_user["name"])}}</h1>
+  <a href="/auth/logout">Sign Out</a>
+ {% else %}
+  <a href="/main">Sign In</a>
+ {% end %}
+</body>
+</html>
